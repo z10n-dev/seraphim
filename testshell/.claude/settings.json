@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//sys/class/power_supply/**)",
+      "Bash(wpctl get-volume @DEFAULT_AUDIO_SINK@)",
+      "Bash(iwgetid -r)",
+      "Bash(nmcli -t -f active,ssid dev wifi)",
+      "Bash(nmcli -t -f ACTIVE,SSID,SIGNAL dev wifi)",
+      "Read(//proc/453926/net/**)",
+      "Bash(sh -c 'S=$\\(iwgetid -r 2>/dev/null\\); Q=$\\(awk '\"''\"'NR==3{q=int\\($3+0\\); print \\(q>70?100:q>0?int\\(q*100/70\\):0\\)}'\"''\"' /proc/net/wireless 2>/dev/null\\); printf \"\"%s|%s\\\\n\"\" \"\"${S}\"\" \"\"${Q:-0}\"\"')",
+      "Bash(bluetoothctl show)",
+      "Bash(bluetoothctl info)",
+      "Read(//sys/class/bluetooth/**)",
+      "Read(//usr/lib/qt6/qml/Quickshell/**)",
+      "Read(//usr/lib/qt6/qml/Quickshell/Services/**)"
+    ]
+  }
+}
