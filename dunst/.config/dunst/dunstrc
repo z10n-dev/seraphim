@@ -1,0 +1,38 @@
+[global]
+    font = JetBrainsMono Nerd Font 10
+    transparency = 0
+    frame_width = 2
+    frame_color = "#FFFFFF"
+    separator_color = frame
+    corner_radius = 8
+
+    padding = 10
+    horizontal_padding = 0
+    separator_height = 0
+    line_height = 0
+
+    origin = top-right
+
+    mouse_middle_click = close_current
+    mouse_right_click = close_all
+
+[urgency_low]
+    geometry = "300x50-30+30"
+    background = "#1A1A1A"
+    foreground = "#FFFFFF"
+    frame_color = "#FFFFFF"
+    timeout = 5
+
+[urgency_normal]
+    geometry = "300x50-30+30"
+    background = "#1A1A1A"
+    foreground = "#FFFFFF"
+    frame_color = "#FFFFFF"
+    timeout = 5
+
+[urgency_critical]
+    geometry = "300x50-30+30"
+    background = "#1A1A1A"
+    foreground = "#FFFFFF"
+    frame_color = "#FFFFFF"
+    timeout = 0

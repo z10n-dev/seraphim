@@ -1,0 +1,86 @@
+/*******************************************************************************
+ * MONOCHROME ROFI THEME 
+ *******************************************************************************/
+
+* {
+    /* Color Palette */
+    bg:      #000000;
+    fg:      #ffffff;
+    accent:  #ffffff;
+    border:  #ffffff;
+    
+    /* Transparent versions for subtle effects */
+    bg-alt:  #111111;
+    
+    background-color:   transparent;
+    text-color:         @fg;
+    margin:             0;
+    padding:            0;
+    spacing:            0;
+}
+
+window {
+    width:            30%;
+    background-color: @bg;
+    border:           2px;
+    border-color:     @border;
+    border-radius:    0px; /* Set to 8px if you want rounded corners */
+}
+
+mainbox {
+    padding:    20px;
+    children:   [ inputbar, listview ];
+}
+
+inputbar {
+    margin:             0px 0px 20px 0px;
+    children:           [ prompt, entry ];
+    background-color:   @bg-alt;
+    border:             1px;
+    border-color:       @border;
+}
+
+prompt {
+    padding:            10px;
+    background-color:   @accent;
+    text-color:         @bg;
+    font:               "JetBrainsMono Nerd Font Bold 12";
+}
+
+entry {
+    padding:            10px;
+    placeholder:        "Search...";
+    placeholder-color:  #444444;
+}
+
+listview {
+    lines:      8;
+    columns:    1;
+    fixed-height: true;
+}
+
+element {
+    padding:    8px;
+    spacing:    10px;
+}
+
+element normal.normal {
+    background-color: @bg;
+    text-color:       @fg;
+}
+
+element selected.normal {
+    background-color: @accent;
+    text-color:       @bg;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}
+
+element-icon {
+    size:             24px;
+    background-color: inherit;
+}
